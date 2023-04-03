@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+
+:root {
+    --accent: #fb991b;
+    --height: 60px;
+    --radius: 16px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #222429;
+    color: var(--accent);
+    font-family: 'Nunite', sans-serif;
+    
+}
+
+ /* start grid styles  */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    min-height: 100vh;
+    grid-gap: 32px;
+    padding: 64px;
+}
+
+
+/* end grid  styles */
+
+/* button start  */
+
+.buttons {
+    display: flex;
+    gap: 16px;
+    font-size: 24px;
+    font-weight: 100;
+}
+
+.button {
+    height: var(--height);
+    outline: 1px solid white;
+    text-align: center;
+    line-height: var(--height);
+    padding: 0 3vw;
+    border-radius: var(--radius);
+}
+
+.button_press {
+
+}
+
+.button_hover {
+
+}
+
+.button_active {
+
+}
+
+ /* button end  */
