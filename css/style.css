@@ -37,9 +37,39 @@ body {
 .grid > div > *:not(:last-child) {
     margin-bottom: 32px;
 }
-
-
 /* end grid  styles */
+
+/* Thems */
+.default {
+    color: #81818d;
+    background-color: var(--bg);
+    box-shadow: var(--shadow);
+}
+
+.press {
+    box-shadow: var(--shadow_inset);
+    color: #4e4e58;
+    font-weight: 200;
+    background-color: var(--bg_inset);
+}
+
+.default:hover,
+.hover {
+    background: var(--accent);
+    color: white;
+}
+
+.active {
+    color: var(--accent);
+}
+
+.icon {
+    width: var(--size);
+    padding: 0;
+}
+
+/* End Thems style*/
+
 
 /* button start  */
 
@@ -58,34 +88,4 @@ body {
     align-items: center;
     padding: 0 3vw;
     border-radius: var(--radius);
-    color: #81818d;
-    background-color: var(--bg);
-    box-shadow: var(--shadow);
 }
-
-.button_press {
-    box-shadow: var(--shadow_inset);
-    color: #4e4e58;
-    font-weight: 200;
-    background-color: var(--bg_inset);
-}
-
-.button_hover {
-    background: var(--accent);
-    color: white;
-}
-
-.button_active {
-    color: var(--accent);
-}
-
- /* button end  */
-
- /* Start button icon styles  */
-
-.button_icon {
-    width: var(--size);
-    padding: 0;
-}
-
- /* End button icon styles  */
