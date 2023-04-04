@@ -3,8 +3,11 @@
 
 :root {
     --accent: #fb991b;
+    --bg: #2b2b35;
     --height: 60px;
     --radius: 16px;
+    --shadow: -4px -4px 4px #ffffff17, 4px 4px 4px rgba(0, 0, 0, 0.3);
+    --shadow_inset: inset 4px 4px 4px rgba(0, 0, 0, 0.3), inset -4px -4px 4px #ffffff17;
 }
 
 *{
@@ -43,15 +46,19 @@ body {
 
 .button {
     height: var(--height);
-    outline: 1px solid white;
     text-align: center;
     line-height: var(--height);
     padding: 0 3vw;
     border-radius: var(--radius);
+    color: #81818d;
+    background-color: var(--bg);
+    box-shadow: var(--shadow);
 }
 
 .button_press {
-
+    box-shadow: var(--shadow_inset);
+    color: #4e4e58;
+    font-weight: 200;
 }
 
 .button_hover {
