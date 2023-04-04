@@ -51,6 +51,7 @@ body {
 }
 
 .button {
+    cursor: pointer;
     height: var(--size);
     display: grid;
     justify-content: center;
