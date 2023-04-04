@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url(../fonts/style.css);
 
 
 :root {
     --accent: #fb991b;
     --bg: #2b2b35;
-    --height: 60px;
+    --bg_inset: #23212c;
+    --size: 60px;
     --radius: 16px;
     --shadow: -4px -4px 4px #ffffff17, 4px 4px 4px rgba(0, 0, 0, 0.3);
     --shadow_inset: inset 4px 4px 4px rgba(0, 0, 0, 0.3), inset -4px -4px 4px #ffffff17;
@@ -32,6 +34,10 @@ body {
     padding: 64px;
 }
 
+.grid > div > *:not(:last-child) {
+    margin-bottom: 32px;
+}
+
 
 /* end grid  styles */
 
@@ -45,9 +51,10 @@ body {
 }
 
 .button {
-    height: var(--height);
-    text-align: center;
-    line-height: var(--height);
+    height: var(--size);
+    display: grid;
+    justify-content: center;
+    align-items: center;
     padding: 0 3vw;
     border-radius: var(--radius);
     color: #81818d;
@@ -59,14 +66,25 @@ body {
     box-shadow: var(--shadow_inset);
     color: #4e4e58;
     font-weight: 200;
+    background-color: var(--bg_inset);
 }
 
 .button_hover {
-
+    background: var(--accent);
+    color: white;
 }
 
 .button_active {
-
+    color: var(--accent);
 }
 
  /* button end  */
+
+ /* Start button icon styles  */
+
+.button_icon {
+    width: var(--size);
+    padding: 0;
+}
+
+ /* End button icon styles  */
