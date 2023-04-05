@@ -26,7 +26,8 @@ body {
 }
 
  /* start grid styles  */
-.grid {
+.grid,
+.inner-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     min-height: 100vh;
@@ -34,7 +35,12 @@ body {
     padding: 64px;
 }
 
-.grid > div > *:not(:last-child) {
+.inner-grid {
+    min-height: initial;
+}
+
+.grid > div > *:not(:last-child), 
+.inner-grid > div > *:not(:last-child) {
     margin-bottom: 32px;
 }
 /* end grid  styles */
@@ -57,15 +63,18 @@ body {
 .hover {
     background: var(--accent);
     color: white;
+    box-shadow: var(--shadow);
 }
 
 .active {
     color: var(--accent);
+    background-color: var(--bg);
+    box-shadow: var(--shadow);
 }
 
 .icon {
     width: var(--size);
-    padding: 0;
+    padding: 0 !important;
 }
 
 /* End Thems style*/
@@ -89,3 +98,16 @@ body {
     padding: 0 3vw;
     border-radius: var(--radius);
 }
+
+/* start input styles  */
+
+.input {
+    height: var(--size);
+    width: 100%;
+    text-align: center;
+    border: none;
+    outline: none;
+    font-size: 24px;
+}
+
+/* end input styles  */
