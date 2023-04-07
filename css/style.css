@@ -36,6 +36,7 @@ body {
 }
 
 .inner-grid {
+    padding: 0;
     min-height: initial;
 }
 
@@ -60,6 +61,7 @@ body {
     color: #81818d;
     background-color: var(--bg);
     box-shadow: var(--shadow);
+    border-radius: var(--radius)
 }
 .default ::-webkit-input-placeholder{
     color: #81818d;
@@ -183,3 +185,40 @@ display: none;
 }
 
 /* End switch styles  */
+
+/* Start panel styles  */
+
+.panel {
+    padding: 32px;
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    align-items: center;
+    text-align: right;
+
+}
+
+.panel:hover{
+    color: #81818d;
+    background-color: var(--bg);
+}
+
+.panel__img {
+    --size: 115px;
+    width: var(--size);
+    height: var(--size);
+    border-radius: calc(var(--radius) / 2);
+}
+
+.panel__label {
+    font-size: 22px;
+    font-weight: 100;
+}
+
+.panel__price {
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--accent);
+}
+
+/* End panel styles  */
