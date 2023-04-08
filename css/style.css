@@ -68,10 +68,10 @@ body {
 }
 
 .press {
-    box-shadow: var(--shadow_inset);
     color: #4e4e58;
-    font-weight: 200;
+    box-shadow: var(--shadow_inset);
     background-color: var(--bg_inset);
+    font-weight: 200;
 }
 
 .press ::-webkit-input-placeholder{
@@ -222,3 +222,55 @@ display: none;
 }
 
 /* End panel styles  */
+
+/* Start radio buttons styles  */
+
+.radio input {
+    display: none;
+}
+
+.radio div {
+    cursor: pointer;
+    width: var(--size);
+    height: var(--size);
+    border-radius: var(--size);
+    box-shadow: var(--shadow_inset);
+    background-color: var(--bg_inset);
+    transition: all 0.3s ease-in-out;
+    position: relative;
+}
+
+.radio ::after {
+    --offset: 25%;
+    content: '';
+    position: absolute;
+    top: var(--offset);
+    right: var(--offset);
+    left: var(--offset);
+    bottom: var(--offset);
+    border-radius: var(--size);
+    background-color: var(--bg);
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease-in-out;
+}
+
+.radio :checked + div {
+    background-color: var(--bg);
+    box-shadow: var(--shadow);
+}
+
+.radio :checked + div::after {
+    background-color: var(--accent);
+}
+
+.radio_square div {
+    border-radius: var(--radius);
+}
+.radio_square div::after {
+    border-radius: calc(var(--radius) / 2);
+}
+
+
+
+
+/* End radio buttons styles  */
