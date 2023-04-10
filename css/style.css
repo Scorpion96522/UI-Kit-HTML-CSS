@@ -28,16 +28,19 @@ body {
  /* start grid styles  */
 .grid,
 .inner-grid {
-    display: grid;
+    max-width: 1400px;
+    margin: 0 auto;
     grid-template-columns: repeat(2, 1fr);
+    display: grid;
     min-height: 100vh;
     grid-gap: 32px;
     padding: 64px;
 }
 
 .inner-grid {
-    padding: 0;
-    min-height: initial;
+    grid-template-columns: repeat(2, 1fr);
+    display: grid;
+    grid-gap: 32px;
 }
 
 .grid > div > *:not(:last-child), 
@@ -111,6 +114,7 @@ body {
 
 .buttons {
     display: flex;
+    justify-content: space-between;
     gap: 16px;
     font-size: 24px;
     font-weight: 100;
@@ -270,7 +274,16 @@ display: none;
     border-radius: calc(var(--radius) / 2);
 }
 
-
-
-
 /* End radio buttons styles  */
+
+/* Start round progress  */
+
+.round-progress  {
+    --size: 194px;
+    width: var(--size);
+    height: var(--size);
+    border-radius: var(--size);
+
+}
+
+/* End round progress  */
