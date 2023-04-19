@@ -283,7 +283,38 @@ display: none;
     width: var(--size);
     height: var(--size);
     border-radius: var(--size);
+    position: relative;
 
+}
+
+.round-progress div{
+    position: absolute;
+    top: 11.5%;
+    left: 11.5%;
+    width: 78%;
+    height: 78%;
+    border-radius: 50%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+}
+
+.round-progress svg {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    transform: rotate(-90deg);
+}
+
+.round-progress circle {
+    fill: transparent;
+    stroke: var(--accent);
+    stroke-width: 20px;
+    stroke-dasharray: 200 314;
+    transition: all 0.3s ease-in-out;
 }
 
 /* End round progress  */
