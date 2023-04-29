@@ -376,3 +376,33 @@ i.ic_arrow_right {
     font-size: 1.6em;
 }
 /* End search styles  */
+
+/* Start Tooltip styles  */
+
+.tooltip {
+    padding: 16px 32px;
+    font-size: 32px;
+    border-radius: var(--radius);
+    font-weight: 200;
+    position: relative;
+    box-shadow: -4px -4px 4px #ffffff17;
+    background: var(--bg);
+    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.3));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    min-height: 76px;
+}
+
+.tooltip::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: -30%;
+    transform: translateX(-50%);
+    border: 10px solid transparent;
+    border-top: 13px solid var(--bg);
+}
+/* End Tooltip styles  */
