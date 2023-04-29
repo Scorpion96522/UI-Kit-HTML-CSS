@@ -406,3 +406,48 @@ i.ic_arrow_right {
     border-top: 13px solid var(--bg);
 }
 /* End Tooltip styles  */
+
+/* Start player styles */
+
+.player {
+
+}
+.player__progress {
+    display: flex;
+    height: 8px;
+    margin-bottom: 32px;
+    box-shadow: var(--shadow);
+    border-radius: 100px;
+    overflow: hidden;
+}
+
+.player__progress div{
+    background: var(--accent);
+}
+
+.player__main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.player__time {
+    font-size: 18px;
+    font-weight: 100;
+}
+
+.player__actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+}
+
+.player__actions >* {
+    width: calc(var(--size) / 1.4);
+    height: calc(var(--size) / 1.4);
+    border-radius: 8px;
+    font-size: 20px;
+}
+
+
+/* End player styles */
