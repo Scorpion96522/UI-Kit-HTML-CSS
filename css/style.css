@@ -451,3 +451,54 @@ i.ic_arrow_right {
 
 
 /* End player styles */
+
+/* Start flex message style  */
+
+.message {
+    padding: 24px;
+    color: #81818d;
+    background-color: var(--bg);
+    box-shadow:   4px 4px 4px rgba(0, 0, 0, 0.3);
+    border-radius: var(--radius);
+    font-size: 18px;
+    font-weight: 200;
+    line-height: 1.2em;
+    position: relative;
+    filter: drop-shadow(-4px -4px 4px #ffffff17);
+}
+
+
+.message::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: -7%;
+    bottom: 0;
+    width: 80px;
+    height: 50%;
+    background-color: var(--bg);
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    transform: skewX(322deg);
+    z-index: -2;
+}
+
+.message::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: var(--bg);
+    z-index: -1;
+}
+
+
+.message_active {
+    background: var(--accent);
+    color: white;
+}
+
+/* End flex message style  */
