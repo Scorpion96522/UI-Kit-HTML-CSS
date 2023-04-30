@@ -54,6 +54,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 32px;
 }
 
 /* end  flex  */
@@ -455,9 +456,9 @@ i.ic_arrow_right {
 /* Start flex message style  */
 
 .message {
+    flex-grow: 1;
     padding: 24px;
     color: #81818d;
-    background-color: var(--bg);
     box-shadow:   4px 4px 4px rgba(0, 0, 0, 0.3);
     border-radius: var(--radius);
     font-size: 18px;
@@ -465,6 +466,7 @@ i.ic_arrow_right {
     line-height: 1.2em;
     position: relative;
     filter: drop-shadow(-4px -4px 4px #ffffff17);
+    margin-left: 20px;
 }
 
 
@@ -472,13 +474,13 @@ i.ic_arrow_right {
     content: '';
     display: block;
     position: absolute;
-    left: -7%;
+    left: -8px;
     bottom: 0;
     width: 80px;
-    height: 50%;
+    height: 50px;
     background-color: var(--bg);
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
-    border-radius: 8px;
+    border-radius: 10px;
     transform: skewX(322deg);
     z-index: -2;
 }
@@ -493,12 +495,26 @@ i.ic_arrow_right {
     left: 0;
     background-color: var(--bg);
     z-index: -1;
+    border-radius: var(--radius);
 }
 
 
 .message_active {
-    background: var(--accent);
     color: white;
+    margin-left: 0;
+    margin-right: 20px;
+}
+
+.message_active::before {
+    left: initial;
+    right: -8px;
+    transform: skewX(38deg);
+}
+
+.message_active::before,
+.message_active::after {
+    background: var(--accent);
+
 }
 
 /* End flex message style  */
